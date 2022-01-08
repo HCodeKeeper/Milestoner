@@ -14,6 +14,7 @@ namespace MilestonerApp
     public partial class Form1 : Form, Milestoner.IGui
     {
         Milestoner.Vector _Vector;
+        int[] _Resolution;
         public Form1()
         {
             _Vector = new Vector(this);
