@@ -1,0 +1,10 @@
+D:\Github\MilestonerApp\bin\Debug\MilestonerApp.exe.config
+D:\Github\MilestonerApp\bin\Debug\MilestonerApp.exe
+D:\Github\MilestonerApp\bin\Debug\MilestonerApp.pdb
+D:\Github\MilestonerApp\obj\Debug\MilestonerApp.csproj.SuggestedBindingRedirects.cache
+D:\Github\MilestonerApp\obj\Debug\MilestonerApp.Form1.resources
+D:\Github\MilestonerApp\obj\Debug\MilestonerApp.Properties.Resources.resources
+D:\Github\MilestonerApp\obj\Debug\MilestonerApp.csproj.GenerateResource.cache
+D:\Github\MilestonerApp\obj\Debug\MilestonerApp.csproj.CoreCompileInputs.cache
+D:\Github\MilestonerApp\obj\Debug\MilestonerApp.exe
+D:\Github\MilestonerApp\obj\Debug\MilestonerApp.pdb
