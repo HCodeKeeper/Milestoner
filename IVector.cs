@@ -15,5 +15,7 @@ namespace Milestoner
         void ChangePoint(string name, int order);
 
         int Count();
+
+        void Notify(SortedSet<Point> points);
     }
 }

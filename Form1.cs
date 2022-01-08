@@ -11,12 +11,12 @@ using Milestoner;
 
 namespace MilestonerApp
 {
-    public partial class Form1 : Form
+    public partial class Form1 : Form, Milestoner.IGui
     {
         Milestoner.Vector _Vector;
         public Form1()
         {
-            _Vector = new Vector();
+            _Vector = new Vector(this);
             InitializeComponent();
         }
 
@@ -47,11 +47,23 @@ namespace MilestonerApp
 
         private void AddPoint_Click(object sender, EventArgs e)
         {
-            Console.WriteLine(this.OrderEntry.Text);
             int order = int.Parse(this.OrderEntry.Text);
             string name = this.NameEntry.Text;
             _Vector.AddPoint(name, order);
-            PointsBox.Items.Add(this.NameEntry.Text); //Need to add observerance
+        }
+
+        public void DataUpdate(SortedSet<Milestoner.Point> points)
+        {
+            int itemsQuantity = PointsBox.Items.Count;
+            for(int i = 0; i < itemsQuantity; i++)
+            {
+                PointsBox.Items.RemoveAt(0);
+            }
+            SortedSet<Milestoner.Point> reversedPoints = new SortedSet<Milestoner.Point>(points, new ReversedPointComparator());
+            foreach (Milestoner.Point point in reversedPoints)
+            {
+                PointsBox.Items.Add(point.GetName());
+            }
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -61,7 +73,7 @@ namespace MilestonerApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            _Vector.ChangePoint(PointsBox.Text, int.Parse(OrderEntry.Text));
         }
     }
 }

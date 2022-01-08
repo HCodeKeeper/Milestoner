@@ -8,3 +8,4 @@ D:\Github\MilestonerApp\obj\Debug\MilestonerApp.csproj.GenerateResource.cache
 D:\Github\MilestonerApp\obj\Debug\MilestonerApp.csproj.CoreCompileInputs.cache
 D:\Github\MilestonerApp\obj\Debug\MilestonerApp.exe
 D:\Github\MilestonerApp\obj\Debug\MilestonerApp.pdb
+D:\Github\MilestonerApp\obj\Debug\MilestonerApp.csproj.AssemblyReference.cache

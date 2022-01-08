@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.AddPoint = new System.Windows.Forms.Button();
             this.DeletePoint = new System.Windows.Forms.Button();
             this.ChangeName = new System.Windows.Forms.Button();
@@ -40,11 +41,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.OrderEntry = new System.Windows.Forms.TextBox();
             this.OrderButton = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // AddPoint
             // 
-            this.AddPoint.Location = new System.Drawing.Point(12, 101);
+            this.AddPoint.Location = new System.Drawing.Point(12, 120);
             this.AddPoint.Name = "AddPoint";
             this.AddPoint.Size = new System.Drawing.Size(114, 23);
             this.AddPoint.TabIndex = 1;
@@ -54,7 +58,7 @@
             // 
             // DeletePoint
             // 
-            this.DeletePoint.Location = new System.Drawing.Point(12, 130);
+            this.DeletePoint.Location = new System.Drawing.Point(12, 149);
             this.DeletePoint.Name = "DeletePoint";
             this.DeletePoint.Size = new System.Drawing.Size(114, 23);
             this.DeletePoint.TabIndex = 2;
@@ -63,17 +67,18 @@
             // 
             // ChangeName
             // 
-            this.ChangeName.Location = new System.Drawing.Point(12, 72);
+            this.ChangeName.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ChangeName.Location = new System.Drawing.Point(12, 91);
             this.ChangeName.Name = "ChangeName";
             this.ChangeName.Size = new System.Drawing.Size(114, 23);
             this.ChangeName.TabIndex = 3;
             this.ChangeName.Text = "Change the Name";
-            this.ChangeName.UseVisualStyleBackColor = true;
+            this.ChangeName.UseVisualStyleBackColor = false;
             this.ChangeName.Click += new System.EventHandler(this.button3_Click);
             // 
             // NameEntry
             // 
-            this.NameEntry.Location = new System.Drawing.Point(12, 46);
+            this.NameEntry.Location = new System.Drawing.Point(12, 65);
             this.NameEntry.Name = "NameEntry";
             this.NameEntry.Size = new System.Drawing.Size(114, 20);
             this.NameEntry.TabIndex = 5;
@@ -83,7 +88,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 27);
+            this.label1.Location = new System.Drawing.Point(12, 46);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 16);
             this.label1.TabIndex = 7;
@@ -92,17 +97,17 @@
             // 
             // PointsBox
             // 
+            this.PointsBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PointsBox.FormattingEnabled = true;
-            this.PointsBox.Location = new System.Drawing.Point(12, 3);
+            this.PointsBox.Location = new System.Drawing.Point(12, 22);
             this.PointsBox.Name = "PointsBox";
             this.PointsBox.Size = new System.Drawing.Size(114, 21);
             this.PointsBox.TabIndex = 9;
-            this.PointsBox.Text = "Start Point";
             this.PointsBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // ResolutionEntry
             // 
-            this.ResolutionEntry.Location = new System.Drawing.Point(269, 46);
+            this.ResolutionEntry.Location = new System.Drawing.Point(292, 22);
             this.ResolutionEntry.Name = "ResolutionEntry";
             this.ResolutionEntry.Size = new System.Drawing.Size(114, 20);
             this.ResolutionEntry.TabIndex = 10;
@@ -110,7 +115,7 @@
             // 
             // SetResolutionButton
             // 
-            this.SetResolutionButton.Location = new System.Drawing.Point(269, 72);
+            this.SetResolutionButton.Location = new System.Drawing.Point(292, 48);
             this.SetResolutionButton.Name = "SetResolutionButton";
             this.SetResolutionButton.Size = new System.Drawing.Size(114, 23);
             this.SetResolutionButton.TabIndex = 11;
@@ -121,7 +126,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(266, 27);
+            this.label2.Location = new System.Drawing.Point(289, 3);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 16);
             this.label2.TabIndex = 12;
@@ -132,7 +137,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(132, 27);
+            this.label3.Location = new System.Drawing.Point(155, 3);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 16);
             this.label3.TabIndex = 15;
@@ -140,14 +145,14 @@
             // 
             // OrderEntry
             // 
-            this.OrderEntry.Location = new System.Drawing.Point(132, 46);
+            this.OrderEntry.Location = new System.Drawing.Point(155, 22);
             this.OrderEntry.Name = "OrderEntry";
             this.OrderEntry.Size = new System.Drawing.Size(114, 20);
             this.OrderEntry.TabIndex = 14;
             // 
             // OrderButton
             // 
-            this.OrderButton.Location = new System.Drawing.Point(132, 72);
+            this.OrderButton.Location = new System.Drawing.Point(155, 48);
             this.OrderButton.Name = "OrderButton";
             this.OrderButton.Size = new System.Drawing.Size(114, 23);
             this.OrderButton.TabIndex = 13;
@@ -155,11 +160,33 @@
             this.OrderButton.UseVisualStyleBackColor = true;
             this.OrderButton.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(14, 4);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(42, 16);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Point";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(155, 80);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(251, 92);
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(476, 185);
+            this.ClientSize = new System.Drawing.Size(418, 195);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.OrderEntry);
             this.Controls.Add(this.OrderButton);
@@ -175,6 +202,7 @@
             this.Name = "Form1";
             this.Text = "MilestonerBeta";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,6 +221,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox OrderEntry;
         private System.Windows.Forms.Button OrderButton;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

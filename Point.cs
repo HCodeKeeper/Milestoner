@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Milestoner
 {
-    internal class Point
+    public class Point
     {
         private Vector _Vector;
         private string _Name;
