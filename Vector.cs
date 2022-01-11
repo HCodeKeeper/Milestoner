@@ -92,5 +92,10 @@ namespace Milestoner
         {
             return _Points.Count;
         }
+
+        public SortedSet<Point> GetPoint()
+        {
+            return new SortedSet<Point>(_Points, _Points.Comparer);
+        }
     }
 }

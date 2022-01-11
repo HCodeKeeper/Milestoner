@@ -15,10 +15,12 @@ namespace MilestonerApp
     {
         Milestoner.Vector _Vector;
         int[] _Resolution;
+        Drawer _Drawer;
         public Form1()
         {
             _Vector = new Vector(this);
             InitializeComponent();
+            _Drawer = new Drawer();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -75,6 +77,41 @@ namespace MilestonerApp
         private void button1_Click(object sender, EventArgs e)
         {
             _Vector.ChangePoint(PointsBox.Text, int.Parse(OrderEntry.Text));
+        }
+
+        private void SetBackgroundButton_Click(object sender, EventArgs e)
+        {
+            if (!(_Resolution == null))
+            {
+                _Drawer.CreateBackground(_Resolution[0], _Resolution[1], _Vector);
+            }
+        }
+
+        private void SetResolutionButton_Click(object sender, EventArgs e)
+        {
+            string resolution = this.ResolutionEntry.Text;
+            int sepInd = resolution.IndexOf('x');
+            if (sepInd == -1 | sepInd == resolution.Length - 1 | sepInd == 0)
+            {
+                return;
+            }
+
+            int resx;
+            int.TryParse(resolution.Substring(0, sepInd), out resx);
+            int resy;
+            int.TryParse(resolution.Substring(sepInd + 1, resolution.Length - sepInd - 1), out resy);
+
+            if (resx == 0 || resy == 0)
+            {
+                return;
+            }
+                
+            _Resolution = new int[] { resx, resy };
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

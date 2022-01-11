@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.AddPoint = new System.Windows.Forms.Button();
             this.DeletePoint = new System.Windows.Forms.Button();
             this.ChangeName = new System.Windows.Forms.Button();
@@ -42,8 +41,8 @@
             this.OrderEntry = new System.Windows.Forms.TextBox();
             this.OrderButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SetBackgroundButton = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // AddPoint
@@ -121,6 +120,7 @@
             this.SetResolutionButton.TabIndex = 11;
             this.SetResolutionButton.Text = "Set Resolution";
             this.SetResolutionButton.UseVisualStyleBackColor = true;
+            this.SetResolutionButton.Click += new System.EventHandler(this.SetResolutionButton_Click);
             // 
             // label2
             // 
@@ -170,22 +170,34 @@
             this.label4.TabIndex = 16;
             this.label4.Text = "Point";
             // 
-            // pictureBox1
+            // SetBackgroundButton
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(155, 80);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(251, 92);
-            this.pictureBox1.TabIndex = 17;
-            this.pictureBox1.TabStop = false;
+            this.SetBackgroundButton.Location = new System.Drawing.Point(219, 119);
+            this.SetBackgroundButton.Name = "SetBackgroundButton";
+            this.SetBackgroundButton.Size = new System.Drawing.Size(142, 53);
+            this.SetBackgroundButton.TabIndex = 17;
+            this.SetBackgroundButton.Text = "Set the Background";
+            this.SetBackgroundButton.UseVisualStyleBackColor = true;
+            this.SetBackgroundButton.Click += new System.EventHandler(this.SetBackgroundButton_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.Coral;
+            this.label5.Location = new System.Drawing.Point(189, 173);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(200, 13);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Won\'t work if wallpaper engine is running";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(418, 195);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.SetBackgroundButton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.OrderEntry);
@@ -202,7 +214,6 @@
             this.Name = "Form1";
             this.Text = "MilestonerBeta";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,7 +233,8 @@
         private System.Windows.Forms.TextBox OrderEntry;
         private System.Windows.Forms.Button OrderButton;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button SetBackgroundButton;
+        private System.Windows.Forms.Label label5;
     }
 }
 
