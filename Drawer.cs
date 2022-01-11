@@ -47,7 +47,6 @@ namespace Milestoner
             graphics.DrawLine(pen, vectorPadding, height / 2 - thicknessRatio, width - vectorPadding, height / 2 - thicknessRatio);
             //bottom part of arrow
             graphics.DrawLine(pen, width - vectorPadding * 2, height / 2, width - vectorPadding, height / 2 - thicknessRatio);
-            Console.WriteLine(height / 2 + thicknessRatio);
 
             int pointCount = _Vector.Count();
             Font font = new Font("Helvetica", 20);
@@ -55,7 +54,6 @@ namespace Milestoner
             graphics.DrawString("Start", font, Brushes.Yellow, 50, height / 2 - thicknessRatio - 50);
             foreach (Point point in _Vector.GetPoint())
             {
-                Console.WriteLine(point.GetName());
                 graphics.DrawString(point.GetName(), font, Brushes.Yellow, width / (pointCount + 1) * point.GetOrder(), height / 2 - thicknessRatio - 50);
             }
             graphics.DrawString("End", font, Brushes.Yellow, width - 70 - vectorPadding, height / 2 - thicknessRatio - 50);
